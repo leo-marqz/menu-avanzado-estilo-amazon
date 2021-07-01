@@ -1,4 +1,3 @@
 # menu-avanzado-estilo-amazon
-<p> creditos a falconmasters</p>
-<br/>
+<p> Creditos a: <strong>falconmasters</strong> </p>
 <cite>@LeoMarqz - 2021 </cite>
