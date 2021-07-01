@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#eaeded;
+    font-family:Arial, sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+.contenedor{
+    margin:auto;
+    width:80%;
+    max-width:1200px;
+}
+
+main article{
+    background: #fff;
+    margin:20px 0px;
+    padding:20px;
+    height: 1000px;
+}
+
+
+/*  los enlaces del nav */
+
+.menu{
+    background: #232f3e;
+    padding:5px 0px;
+    margin-bottom: 20px;;
+}
+
+.menu .contenedor-botones-menu{
+    display:none;
+    justify-content:space-between;
+}
+
+.menu .contenedor-botones-menu button{
+    font-size: 20px;
+    color:white;
+    padding:10px 20px;
+    border:1px solid transparent;
+    display:inline-block;
+    cursor:pointer;
+    background:none;
+}
+
+.menu .contenedor-botones-menu button:hover{
+    border: 1px solid rgba(255,255,255, .4)
+}
+
+.menu .contenedor-botones-menu .btn-menu-cerrar{
+    display:none;
+}
+
+.menu .contenedor-botones-menu .btn-menu-cerrar.activo{
+    display:inline-block;
+}
+
+.menu .contenedor-enlaces-nav{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.menu .btn-departamentos{
+    color:white;
+    padding:7px;
+    display:flex;
+    align-items: flex-end;
+    border:1px solid transparent;
+    font-size:12px;
+    cursor:default;
+    border-radius: 3px;
+    -webkit-border-radius:;
+    -moz-border-radius:;
+    -ms-border-radius:;
+    -o-border-radius:;
+}
+
+.menu .btn-departamentos i{
+    margin-left: 20px;
+    position:relative;
+    bottom:3px;
+}
+
+.menu .btn-departamentos:hover{
+    border:1px solid rgba(255,255,255, .4);
+}
+
+
+.menu .btn-departamentos span{
+    display:block;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu .contenedor-enlaces-nav .enlaces a{
+    color:#ccc;
+    border:1px solid transparent;
+    padding:7px;
+    font-size: 14px;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.menu .contenedor-enlaces-nav .enlaces a:hover{
+    border:1px solid rgba(255,255,255, .4);
+
+}
+
+
+
+
+
