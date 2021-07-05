@@ -250,6 +250,10 @@ main article{
     overflow:auto;
 }
 
+/* .grid .enlaces-subcategoria button{ */
+    /* display:none; */
+/* } */
+
 .grid .enlaces-subcategoria a {
     color:black;
     display:block;
@@ -367,10 +371,10 @@ main article{
         transition:.3s ease all;
         z-index: 3000;
         width:80%;
+        height:100vh;
         position:fixed;
         top:0px;
         left:0px;
-        height:100vh;
         grid-template-areas: "categorias categorias categorias categorias";
         transform:translateX(-100%);
         -webkit-transition:.3s ease all;
@@ -404,9 +408,42 @@ main article{
     }
 
     .grid .contenedor-subcategorias{
-        display:none;
+        /*display:none;
+        */position:absolute;
+        top:0;
+        width:100%;
+        height:100%;
+        transform:translateX(-100%);
+        transition: .3s ease all;
+        overflow:auto;
+    }
+    .grid .contenedor-subcategorias.activo{
+        transform:translateX(0%);
+        -webkit-transform:translateX(0%);
+        -moz-transform:translateX(0%);
+        -ms-transform:translateX(0%);
+        -o-transform:translateX(0%);
     }
 
+    .grid .contenedor-subcategorias .subcategoria{
+        grid-template-columns: 1fr;
+    }
+
+    .grid .contenedor-subcategorias .banner-subcategoria{
+        width: 100%;
+        min-height: 250px;
+        max-height: 350px;
+    }
+
+    .grid .contenedor-subcategorias .enlaces {
+        min-height: 50vh;
+        overflow: auto;
+    }
+
+    .grid .contenedor-subcategorias .galeria-subcategoria a{
+        width:25%;
+        height:100%;
+    } 
 }
 
 

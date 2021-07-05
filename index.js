@@ -30,13 +30,15 @@ document.querySelectorAll('#menu .categorias a').forEach((elemento)=>{
     elemento.addEventListener('mouseenter',(e)=>{
         // con este codigo obtenemos el valor agregado a nuestros atributos personales ( data-categoria ).
         // console.log(e.target.dataset.categoria); 
-        document.querySelectorAll('#menu .subcategoria').forEach((categoria)=>{
-            // console.log(categoria.dataset.categoria);
-            categoria.classList.remove('activo');
-            if(categoria.dataset.categoria === e.target.dataset.categoria){
-                categoria.classList.add('activo');
-            }
-        });
+        if(!esDispositivoMovil()){
+            document.querySelectorAll('#menu .subcategoria').forEach((categoria)=>{
+                // console.log(categoria.dataset.categoria);
+                categoria.classList.remove('activo');
+                if(categoria.dataset.categoria === e.target.dataset.categoria){
+                    categoria.classList.add('activo');
+                }
+            });
+        }
     });
 });
 
