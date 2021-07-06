@@ -2,6 +2,7 @@ const btnDepartamentos = document.getElementById('btn-departamentos');
 const grid = document.getElementById('grid');
 const contenedorEnlacesNav = document.querySelector('#menu .contenedor-enlaces-nav');
 const btnCerrarMenu = document.getElementById('btn-menu-cerrar');
+const contenedorSubCategorias = document.querySelector('#grid .contenedor-subcategorias');
 
 //                         (window.innerWidth <= 800){ return true; }else{ return false; }
 const esDispositivoMovil = ()=> window.innerWidth <= 800 ? true : false;
@@ -77,3 +78,54 @@ document.querySelector('#grid .categorias .btn-regresar').addEventListener('clic
     grid.classList.remove('activo');
     btnCerrarMenu.classList.remove('activo');
 });
+
+
+document.querySelectorAll('#menu .categorias a').forEach((elemento)=>{
+    elemento.addEventListener('click', (e)=>{
+        if(esDispositivoMovil()){
+            contenedorSubCategorias.classList.add('activo');
+            document.querySelectorAll('#menu .subcategoria').forEach((categoria)=>{
+                categoria.classList.remove('activo');
+                if(categoria.dataset.categoria === e.target.dataset.categoria){
+                    categoria.classList.add('activo');
+                }
+            });
+        }
+    });
+});
+
+// botones de cerrar en subcategorias
+document.querySelectorAll('#grid .contenedor-subcategorias .btn-regresar').forEach((boton)=>{
+    boton.addEventListener('click', (e)=>{
+        e.preventDefault();
+        contenedorSubCategorias.classList.remove('activo');
+    });
+});
+
+
+btnCerrarMenu.addEventListener('click',(e)=>{
+    e.preventDefault();
+    document.querySelectorAll('#menu .activo').forEach((elemento)=>{
+        elemento.classList.remove('activo');
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
